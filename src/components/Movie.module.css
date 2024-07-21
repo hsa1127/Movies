@@ -1,0 +1,113 @@
+/* 전체 컨테이너 */
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #141414; /* 다크 배경색 */
+    color: white; /* 텍스트 색상 변경 */
+    padding: 30px;
+  }
+  
+  /* 로딩 화면 스타일 */
+  .loader {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #e50914; /* 넷플릭스 레드 */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* 텍스트 그림자 */
+  }
+  
+  /* 영화 리스트 스타일 */
+  .movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 중앙 정렬 */
+  }
+  
+  /* 각 영화 박스 스타일 */
+  .movie {
+    border: 1px solid #333; /* 박스 선 색상 */
+    border-radius: 12px; /* 박스 모서리 둥글게 */
+    background-color: #1c1c1c; /* 박스 배경색 */
+    padding: 20px; /* 박스 내부 여백 */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6); /* 박스 그림자 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* 호버 효과 애니메이션 */
+  }
+  
+  .movie:hover {
+    transform: translateY(-5px); /* 호버 시 박스가 살짝 올라감 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); /* 호버 시 그림자 증가 */
+    background-color: #2c2c2c; /* 호버 시 배경색 변화 */
+  }
+  
+  /* 이미지 스타일 */
+  .movie img {
+    width: 100%;
+    height: 250px; /* 이미지 높이 설정 */
+    object-fit: cover; /* 이미지 비율 유지 */
+    border-radius: 12px; /* 이미지 모서리 둥글게 */
+    margin-bottom: 15px;
+  }
+  
+  /* 제목 스타일 */
+  .movie h2 {
+    font-size: 1.8em;
+    margin: 10px 0;
+    color: #e50914; /* 넷플릭스 레드 */
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* 텍스트 그림자 */
+  }
+  
+  /* 설명 스타일 */
+  .movie p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    color: #ddd; /* 부드러운 텍스트 색상 */
+  }
+  
+  /* 장르 리스트 스타일 */
+  .movie ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  .movie ul li {
+    display: inline-block;
+    background: #e50914; /* 넷플릭스 레드 */
+    color: white;
+    padding: 5px 12px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+  }
+  
+  /* 버튼 스타일 */
+  .movie button {
+    display: inline-block;
+    background-color: #e50914; /* 넷플릭스 레드 */
+    color: white;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    font-size: 1em;
+    text-transform: uppercase; /* 버튼 텍스트 대문자로 변환 */
+  }
+  
+  .movie button:hover {
+    background-color: #f40612; /* 버튼 호버 시 밝은 레드 */
+    transform: scale(1.05); /* 버튼 호버 시 확대 효과 */
+  }
+  
